@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="16" fill="#F9F8F5" stroke="#E8E3DA" stroke-width="2"/>
+  <rect x="8" y="8" width="48" height="48" rx="12" fill="#292524"/>
+  <text x="32" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="24" fill="#FAF8F5" text-anchor="middle" letter-spacing="-0.5">MK</text>
+</svg>

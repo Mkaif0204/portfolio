@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohd Kaif — B.Tech CSE (AI &amp; ML) | Portfolio</title>
+  <meta name="description" content="Portfolio of Mohd Kaif — Third-year B.Tech CSE (AI & ML) student at GNITC Hyderabad (CGPA 8.5). Aspiring Web & AI Developer seeking an AI/ML internship." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Typography: Plus Jakarta Sans & Newsreader for an editorial, classy aesthetic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       CLASSY MINIMALIST DESIGN SYSTEM (WARM OFF-WHITE / BEIGE PALETTE)
+       ========================================================================== */
+    :root {
+      --bg: #F9F8F5;            /* Warm off-white / alabaster */
+      --bg-subtle: #F3EFEA;     /* Muted cream */
+      --surface: #FFFFFF;       /* Pure white card surface */
+      --surface-hover: #FDFCF9;
+      --border: #E8E3DA;        /* Delicate warm border */
+      --border-dark: #D4CEBF;   /* Slightly stronger border */
+      --text: #1C1917;          /* Stone 900 (deep charcoal) */
+      --text-muted: #57534E;    /* Stone 600 */
+      --text-light: #78716C;    /* Stone 500 */
+      --accent: #292524;        /* Deep warm charcoal accent */
+      --accent-soft: #EDE8DE;   /* Warm pill background */
+      --accent-link: #854D0E;   /* Warm bronze/amber link accent */
+      --green: #15803D;         /* Subtle forest green for status */
+      --green-bg: #DCFCE7;
+
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-serif: 'Newsreader', Georgia, serif;
+      --font-mono: 'JetBrains Mono', monospace;
+
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 12px -2px rgba(28, 25, 23, 0.05);
+      --radius: 12px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding-bottom: 5rem;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 860px; /* Elegant reading width */
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4 {
+      color: var(--text);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+    }
+
+    .font-serif {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .font-mono {
+      font-family: var(--font-mono);
+      font-size: 0.85em;
+    }
+
+    a {
+      color: var(--text);
+      text-decoration: underline;
+      text-decoration-color: var(--border-dark);
+      text-underline-offset: 3px;
+      transition: all 0.2s ease;
+    }
+    a:hover {
+      text-decoration-color: var(--text);
+      color: #000;
+    }
+
+    /* Header & Navigation */
+    header.site-header {
+      padding: 2.5rem 0 1.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 3.5rem;
+    }
+
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+    }
+
+    .avatar-initials {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #FAF8F5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    .nav-subtitle {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      margin-top: -2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid var(--border-dark);
+      background: var(--surface);
+      color: var(--text);
+      transition: all 0.15s ease;
+      font-family: var(--font-sans);
+    }
+    .btn:hover {
+      background: var(--bg-subtle);
+      border-color: var(--text-muted);
+    }
+
+    .btn-dark {
+      background: var(--accent);
+      color: #FAF8F5;
+      border-color: var(--accent);
+    }
+    .btn-dark:hover {
+      background: #171514;
+      color: #FFFFFF;
+      border-color: #171514;
+    }
+
+    /* Status Badge */
+    .status-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.3rem 0.75rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      margin-bottom: 3.5rem;
+    }
+
+    .hero-title {
+      font-size: 2.25rem;
+      font-weight: 600;
+      line-height: 1.25;
+      margin-bottom: 1.25rem;
+      color: var(--text);
+      letter-spacing: -0.03em;
+    }
+
+    .hero-bio {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-bio strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .quick-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      padding: 1.25rem 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+    }
+
+    .meta-item-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-light);
+      margin-bottom: 0.2rem;
+      font-weight: 600;
+    }
+
+    .meta-item-value {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    /* Section Styling */
+    section {
+      margin-bottom: 4rem;
+    }
+
+    .section-title-wrap {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-heading {
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .section-subtext {
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+
+    /* Skills Clean Table/Grid */
+    .skills-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .skill-row {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--border);
+      align-items: baseline;
+      gap: 1rem;
+    }
+    .skill-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .skill-row:first-child {
+      padding-top: 0;
+    }
+
+    .skill-category-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .skill-tag {
+      font-size: 0.825rem;
+      padding: 0.2rem 0.55rem;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .skill-tag.highlight {
+      background: #F2EFE9;
+      color: var(--text);
+      border-color: var(--border-dark);
+      font-weight: 600;
+    }
+
+    /* Project Cards */
+    .projects-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .project-entry {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .project-entry:hover {
+      border-color: var(--border-dark);
+      box-shadow: var(--shadow-md);
+    }
+
+    .project-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .project-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .project-badge {
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      color: var(--text-light);
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    .project-stack-line {
+      font-size: 0.825rem;
+      font-family: var(--font-mono);
+      color: var(--accent-link);
+      margin-bottom: 0.9rem;
+    }
+
+    .project-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .project-bullets li {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      position: relative;
+      padding-left: 1.25rem;
+    }
+    .project-bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--text-light);
+    }
+
+    .project-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Education & Certifications Layout */
+    .edu-cert-wrap {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 1.5rem;
+    }
+
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .edu-degree {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.25rem;
+    }
+
+    .edu-college {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .edu-cgpa-pill {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text);
+      background: #F2EFE9;
+      border: 1px solid var(--border-dark);
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+    }
+
+    .cert-entry {
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .cert-entry:first-child {
+      padding-top: 0;
+    }
+    .cert-entry:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .cert-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .cert-issuer {
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+
+    /* Contact Section */
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .contact-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .contact-link-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 0.85rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.85rem;
+    }
+
+    .copy-btn {
+      background: none;
+      border: none;
+      color: var(--text-light);
+      cursor: pointer;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+    .copy-btn:hover {
+      color: var(--text);
+      background: var(--border);
+    }
+
+    /* Clean Contact Form */
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 0.35rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .form-input, .form-textarea {
+      width: 100%;
+      padding: 0.65rem 0.85rem;
+      border-radius: 8px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: var(--text);
+      transition: border-color 0.2s ease;
+    }
+    .form-input:focus, .form-textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      background: #FFFFFF;
+    }
+
+    /* Footer */
+    footer.site-footer {
+      margin-top: 5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--accent);
+      color: #FAF8F5;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.25s ease;
+      pointer-events: none;
+      z-index: 100;
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .quick-meta-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .skill-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+      .edu-cert-wrap {
+        grid-template-columns: 1fr;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+
+    /* Print Stylesheet for Instant Resume Export */
+    @media print {
+      body {
+        background: #FFFFFF !important;
+        color: #000000 !important;
+        font-size: 11pt;
+        padding: 0 !important;
+      }
+      header.site-header, .hero-actions, .project-actions, .contact-box form, footer.site-footer, .toast {
+        display: none !important;
+      }
+      .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+      }
+      .skills-block, .project-entry, .info-card, .contact-box {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin-bottom: 1.5rem !important;
+      }
+      a {
+        text-decoration: none !important;
+        color: #000 !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header & Minimal Navigation -->
+    <header class="site-header">
+      <nav class="nav-bar">
+        <a href="#hero" class="nav-brand">
+          <div class="avatar-initials">MK</div>
+          <div>
+            <div class="nav-title">Mohd Kaif</div>
+            <div class="nav-subtitle">B.Tech CSE (AI &amp; ML) Student</div>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div style="display: flex; gap: 0.5rem;">
+          <button class="btn btn-dark" onclick="window.print()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Print Resume
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero / Intro -->
+    <section class="hero-section" id="hero">
+      <div class="status-tag">
+        <span class="status-dot"></span>
+        <span>Seeking AI/ML &amp; Web Developer Internship • Hyderabad / Remote</span>
+      </div>
+
+      <h1 class="hero-title">
+        Building AI-powered web applications with Python, Flask, FastAPI &amp; OpenCV.
+      </h1>
+
+      <p class="hero-bio">
+        I am <strong>Mohd Kaif</strong>, a motivated, detail-oriented third-year B.Tech CSE (Artificial Intelligence &amp; Machine Learning) student at Guru Nanak Institution Technical Campus, Hyderabad with an <strong>8.5 CGPA</strong>. I have hands-on experience building practical AI web tools, computer vision prototypes, and REST APIs. I’m seeking an internship where I can learn from experienced engineers and contribute to real-world software solutions.
+      </p>
+
+      <!-- Quick Metadata -->
+      <div class="quick-meta-grid">
+        <div>
+          <div class="meta-item-label">Degree</div>
+          <div class="meta-item-value">B.Tech (AI &amp; ML)</div>
+        </div>
+        <div>
+          <div class="meta-item-label">Academic Record</div>
+          <div class="meta-item-value">8.5 CGPA</div>
+        </div>
+        <div>
+          <div class="meta-item-label">Location</div>
+          <div class="meta-item-value">Hyderabad, India</div>
+        </div>
+        <div>
+          <div class="meta-item-label">Languages</div>
+          <div class="meta-item-value">English, Hindi, Urdu</div>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-dark">View Projects ↓</a>
+        <a href="https://github.com/Mkaif0204" target="_blank" rel="noopener noreferrer" class="btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/mohd-kaif-a67298224" target="_blank" rel="noopener noreferrer" class="btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn
+        </a>
+        <button class="btn" onclick="copyContact('mohdkaif6292@gmail.com', 'Email copied!')">
+          Copy Email
+        </button>
+      </div>
+    </section>
+
+    <!-- Technical Skills (Grounded & Realistic) -->
+    <section id="skills">
+      <div class="section-title-wrap">
+        <h2 class="section-heading">Technical Skills</h2>
+        <span class="section-subtext">Core competencies grounded in coursework &amp; project work</span>
+      </div>
+
+      <div class="skills-block">
+        <div class="skill-row">
+          <div class="skill-category-name">Programming Languages</div>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">Python</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">SQL (Basic)</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-category-name">Data Science &amp; AI / ML</div>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">NumPy</span>
+            <span class="skill-tag highlight">Pandas (Basic)</span>
+            <span class="skill-tag">Scikit-Learn (Basics)</span>
+            <span class="skill-tag highlight">OpenCV</span>
+            <span class="skill-tag">Haar Cascades</span>
+            <span class="skill-tag">OpenAI API</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-category-name">Backend &amp; Web Frameworks</div>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">Flask</span>
+            <span class="skill-tag highlight">FastAPI (Basic)</span>
+            <span class="skill-tag">Streamlit</span>
+            <span class="skill-tag">RESTful APIs</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-category-name">Frontend</div>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">Bootstrap</span>
+            <span class="skill-tag">Tailwind CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-category-name">Databases &amp; Cloud Tools</div>
+          <div class="skill-tags">
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">SQL (Basic)</span>
+            <span class="skill-tag">Supabase</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-category-name">Developer Tools</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">VS Code</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-category-name">Core Computer Science</div>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">Data Structures</span>
+            <span class="skill-tag highlight">Object-Oriented Programming (OOP)</span>
+            <span class="skill-tag">DBMS</span>
+            <span class="skill-tag">Operating Systems (Basics)</span>
+            <span class="skill-tag">Software Development Life Cycle (SDLC)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects (Authentic to Resume) -->
+    <section id="projects">
+      <div class="section-title-wrap">
+        <h2 class="section-heading">Featured Projects</h2>
+        <span class="section-subtext">Real applications built individually and in hackathon sprints</span>
+      </div>
+
+      <div class="projects-list">
+        <!-- Project 1: SkillSync AI -->
+        <article class="project-entry">
+          <div class="project-header">
+            <h3 class="project-title">SkillSync AI</h3>
+            <span class="project-badge">Hackathon Team Project • Sep 2025</span>
+          </div>
+
+          <div class="project-stack-line">
+            Python • FastAPI • Streamlit / React • OpenAI API • Supabase
+          </div>
+
+          <ul class="project-bullets">
+            <li>Developed an AI-powered platform that analyzes the gap between university curriculum and current industry skill requirements.</li>
+            <li>Built personalized skill-gap analysis and learning recommendations for students based on target engineering roles.</li>
+            <li>Used job market data, industry trends, and AI to suggest relevant skills and curated learning resources.</li>
+            <li>Aimed to help educational institutions align their academic programs with evolving tech industry needs.</li>
+          </ul>
+
+          <div class="project-actions">
+            <a href="https://github.com/Mkaif0204" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+              View on GitHub
+            </a>
+            <span style="font-size: 0.8rem; color: var(--text-light);">Role: Backend &amp; AI Integration</span>
+          </div>
+        </article>
+
+        <!-- Project 2: College Enquiry Chatbot -->
+        <article class="project-entry">
+          <div class="project-header">
+            <h3 class="project-title">College Enquiry Chatbot</h3>
+            <span class="project-badge">Web &amp; NLP Chatbot</span>
+          </div>
+
+          <div class="project-stack-line">
+            Python • Flask • HTML • CSS • JavaScript
+          </div>
+
+          <ul class="project-bullets">
+            <li>Developed a conversational chatbot that accurately answers queries on college admissions, courses, fee structures, hostel accommodations, placements, and exam schedules.</li>
+            <li>Built a knowledge-based system using Python and Flask to process incoming user queries and return relevant responses.</li>
+            <li>Designed a clean, responsive, and mobile-friendly frontend using HTML and CSS for students and visiting parents.</li>
+          </ul>
+
+          <div class="project-actions">
+            <a href="https://github.com/Mkaif0204" target="_blank" rel="noopener noreferrer" class="btn">
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3: Face Recognition Attendance System -->
+        <article class="project-entry">
+          <div class="project-header">
+            <h3 class="project-title">Face Recognition Attendance System</h3>
+            <span class="project-badge">Computer Vision</span>
+          </div>
+
+          <div class="project-stack-line">
+            Python • OpenCV • Haar Cascade • NumPy
+          </div>
+
+          <ul class="project-bullets">
+            <li>Built a real-time face recognition system using OpenCV and Haar Cascade Classifier algorithms.</li>
+            <li>Captured live video through webcam feeds, detected faces in real-time frames, and recognized authorized individuals against registered student records.</li>
+            <li>Designed for practical applications including automated classroom attendance tracking and access verification.</li>
+          </ul>
+
+          <div class="project-actions">
+            <a href="https://github.com/Mkaif0204" target="_blank" rel="noopener noreferrer" class="btn">
+              View on GitHub
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section id="education">
+      <div class="section-title-wrap">
+        <h2 class="section-heading">Education &amp; Certifications</h2>
+        <span class="section-subtext">Academic record and verified coursework</span>
+      </div>
+
+      <div class="edu-cert-wrap">
+        <!-- Education -->
+        <div class="info-card">
+          <h3 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-light); margin-bottom: 0.75rem; font-weight: 600;">
+            Education
+          </h3>
+          <div class="edu-degree">
+            Bachelor of Technology (B.Tech)
+          </div>
+          <div style="font-weight: 500; font-size: 0.9rem; color: var(--text); margin-bottom: 0.25rem;">
+            Computer Science Engineering (AI &amp; ML)
+          </div>
+          <div class="edu-college">
+            Guru Nanak Institution Technical Campus, Hyderabad (2024 – 2028)
+          </div>
+          <div>
+            <span class="edu-cgpa-pill">CGPA: 8.5 / 10.0 (up to 3rd year)</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-top: 0.5rem;">
+            Relevant Coursework: Data Structures, Object-Oriented Programming, Database Management Systems (DBMS), Operating Systems (basics), and Artificial Intelligence &amp; Machine Learning foundations.
+          </p>
+        </div>
+
+        <!-- Certifications -->
+        <div class="info-card">
+          <h3 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-light); margin-bottom: 0.75rem; font-weight: 600;">
+            Certifications
+          </h3>
+
+          <div class="cert-entry">
+            <div class="cert-name">Introduction to AI</div>
+            <div class="cert-issuer">Google (Skillshop)</div>
+          </div>
+
+          <div class="cert-entry">
+            <div class="cert-name">Python for Everybody</div>
+            <div class="cert-issuer">Coursera</div>
+          </div>
+
+          <div class="cert-entry">
+            <div class="cert-name">Version Control with Git</div>
+            <div class="cert-issuer">Coursera</div>
+          </div>
+
+          <div class="cert-entry">
+            <div class="cert-name">Web Development Bootcamp</div>
+            <div class="cert-issuer">Udemy</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="section-title-wrap">
+        <h2 class="section-heading">Get in Touch</h2>
+        <span class="section-subtext">Available for internships and technical roles</span>
+      </div>
+
+      <div class="contact-box">
+        <div class="contact-grid">
+          <div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Let’s connect</h3>
+            <p class="contact-desc">
+              I am actively looking for an <strong>AI/ML or Web Development Internship</strong>. If you are hiring an intern or building something exciting in AI, I would love to hear from you.
+            </p>
+
+            <div class="contact-list">
+              <div class="contact-link-row">
+                <span><strong>Email:</strong> mohdkaif6292@gmail.com</span>
+                <button class="copy-btn" onclick="copyContact('mohdkaif6292@gmail.com', 'Email copied!')">Copy</button>
+              </div>
+
+              <div class="contact-link-row">
+                <span><strong>Phone:</strong> +91 81787 80447</span>
+                <button class="copy-btn" onclick="copyContact('+918178780447', 'Phone copied!')">Copy</button>
+              </div>
+
+              <div class="contact-link-row">
+                <span><strong>Location:</strong> Hyderabad, Telangana, India</span>
+                <span style="font-size: 0.75rem; color: var(--text-light);">Available</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Message Form -->
+          <div>
+            <form onsubmit="handleSendEmail(event)">
+              <div class="form-group">
+                <label class="form-label">Your Name / Organization</label>
+                <input type="text" id="senderName" class="form-input" placeholder="e.g. Rahul Sharma / Tech Startup" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Your Email</label>
+                <input type="email" id="senderEmail" class="form-input" placeholder="you@company.com" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Message / Role Details</label>
+                <textarea id="senderMsg" class="form-textarea" rows="3" placeholder="Hi Kaif, we liked your profile and would like to discuss an internship opportunity..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-dark" style="width: 100%;">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div>
+        <strong>Mohd Kaif</strong> • B.Tech CSE (AI &amp; ML) • GNITC Hyderabad
+      </div>
+      <div style="display: flex; gap: 1rem;">
+        <a href="https://github.com/Mkaif0204" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/mohd-kaif-a67298224" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:mohdkaif6292@gmail.com">Email</a>
+        <a href="#hero">Back to top ↑</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toastBox">Message</div>
+
+  <script>
+    function showToast(text) {
+      const toast = document.getElementById('toastBox');
+      toast.textContent = text;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2500);
+    }
+
+    function copyContact(text, msg) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(msg);
+      }).catch(() => {
+        const temp = document.createElement('textarea');
+        temp.value = text;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand('copy');
+        document.body.removeChild(temp);
+        showToast(msg);
+      });
+    }
+
+    function handleSendEmail(e) {
+      e.preventDefault();
+      const name = document.getElementById('senderName').value;
+      const email = document.getElementById('senderEmail').value;
+      const msg = document.getElementById('senderMsg').value;
+
+      const subject = encodeURIComponent(`Internship Opportunity for Mohd Kaif from ${name}`);
+      const body = encodeURIComponent(`Hi Kaif,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${msg}`);
+
+      showToast('Opening your email client...');
+      window.location.href = `mailto:mohdkaif6292@gmail.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+</body>
+</html>
